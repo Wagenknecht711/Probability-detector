@@ -1,3 +1,3 @@
 # Probability-detector
 
-useful for macroscale which-way experiments.
+Useful for macroscale which-way experiments. The path with the greatest delay is the concomitant selection for the script.
