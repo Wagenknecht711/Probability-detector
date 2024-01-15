@@ -62,12 +62,6 @@ function btn4_OnTouch()
 { 
 choiceX= Math.floor(Math.random() * (2)) + 0;
 
-if (choiceX == "0"){
-app.ShowPopup("off")
-}
-if (choiceX == "1"){
-app.ShowPopup("on")
-}
-
+app.ShowPopup("randomized" );
 
 } 
