@@ -2,10 +2,10 @@ i = 0
 choiceX=Math.floor(Math.random() * (2)) + 0;
 function OnStart() 
 { 
-	layBut= app.CreateLayout( "linear", "VCenter,FillXY" )  
+
 	lay= app.CreateLayout("Linear", "Horizontal") 
 
-	lay.AddChild( layBut ) 
+
 	btn0 = app.CreateButton( "off", 0.23, 0.1 ) 
 	btn0.SetOnTouch( btn0_OnTouch ) 
 	lay.AddChild( btn0 )
