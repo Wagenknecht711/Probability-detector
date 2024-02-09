@@ -1,6 +1,6 @@
 //Initialise some variables.
 var sensitivity = 50; //percent.
-var minPeriod = 1;  //millisecs.
+var minPeriod = 0;  //millisecs.
 var mosaic = "3x3";
 var snapFolder = "/sdcard/Snaps";
 	
@@ -124,19 +124,22 @@ function OnMotion( data )
 //Take a picture and store to sdcard.
 function Snap()
 {
-if(i % 2 == 0){
+if(i % 2== 1){
 
 
 startTime = new Date().getTime();
 }
 
-if(i % 2 == 1){
+if(i % 2 == 0){
 
 
 endTime = new Date().getTime();
 }
-if(endTime - startTime >0 &endTime - startTime <200){
-app.ShowPopup( endTime - startTime )
+if(endTime - startTime >0 &&endTime - startTime <100){
+app.ShowPopup( "retoggle")
+}
+if(endTime - startTime >100){
+app.ShowPopup( "throw" )
 }
 i+=1
 }
@@ -174,4 +177,4 @@ function Log( msg )
 	if( log.length >= maxLines ) log.shift()
 	log.push( msg + "\n" )
 	txt.SetText( log.join("") )
-}
+				 }
